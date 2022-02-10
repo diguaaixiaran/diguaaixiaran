@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* 设置轮播图样式 */
+
+.focus {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    margin: 100px auto 0;
+    overflow: hidden;
+}
+
+
+/* 设置左右按钮样式，使用相对定位定位到盒子里 */
+
+.arrow-l,
+.arrow-r {
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-50%);
+    border-radius: 15px;
+    background: rgba(0, 0, 0, .2);
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    z-index: 999;
+}
+
+.focus .arrow-l {
+    left: 0;
+}
+
+.focus .arrow-r {
+    right: 0;
+}
+
+
+/* 核心区域样式 */
+
+.focus ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800%;
+}
+
+.focus ul li {
+    /* display: none; */
+    float: left;
+}
+
+
+/* 底部小圆圈 */
+
+.circle {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.circle li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    border: 2px solid rgba(0, 0, 0, .2);
+    margin: 0 3px 0 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.circle .current {
+    background-color: orange;
+}
